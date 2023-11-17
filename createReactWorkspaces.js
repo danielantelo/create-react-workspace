@@ -1,7 +1,7 @@
 const { execSync } = require('child_process');
 const { Command } = require('commander');
-const { existsSync, mkdirSync, renameSync } = require('fs');
-const { copySync, emptyDirSync } = require('fs-extra');
+const { cpSync, existsSync, mkdirSync, renameSync } = require('fs');
+const { resolve } = require('path');
 const replace = require('replace-in-file');
 
 module.exports.init = () => {
@@ -13,32 +13,38 @@ module.exports.init = () => {
     .version('0.1.0');
 
   program
-    .command('init')
     .arguments('<domain>', 'domain to use for packages @mydomain/mypackage')
     .arguments('<appName>', 'app name will be the name of folder and the main react app')
     .option('--template <path-to-template>', 'specify a template for the created project')
     .action((domain, appName, { template }) => {
+      const cleanDomain = domain.replace('@', '');
       const targetDir = `./${appName}`;
-      const templateSource = `./templates/${template}`;
+      const templateSource = resolve(__dirname, `./templates/${template}`);
+
       if (!existsSync(targetDir)) {
         mkdirSync(targetDir);
       }
-      emptyDirSync(targetDir);
-      copySync(templateSource, targetDir, { filter: (src) => !src.includes('node_modules') });
+
+      //   cpSync(templateSource, targetDir, {
+      //     recursive: true,
+      //     force: true,
+      //     filter: (src) => !src.includes('node_modules'),
+      //   });
+      execSync(`cp -r ${templateSource}/ ${targetDir}`);
 
       // update app name
       renameSync(`${targetDir}/apps/my-app`, `${targetDir}/apps/${appName}`);
       replace.sync({
         files: [`${targetDir}/**/*`],
         from: /@mydomain\/my-app/g,
-        to: `@${domain}/${appName}`,
+        to: `@${cleanDomain}/${appName}`,
       });
 
       // update domain name everywhere else
       replace.sync({
         files: [`${targetDir}/**/*`],
         from: /@mydomain/g,
-        to: `@${domain}`,
+        to: `@${cleanDomain}`,
       });
 
       execSync(`cd ${targetDir}; yarn install`);

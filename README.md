@@ -1,4 +1,4 @@
-# Create React Workspace
+# Create React Workspaces
 
 Create a React application workspace with minimal effort.
 
@@ -16,4 +16,10 @@ The structure looks something like:
 |   |- apis/
 |   |- components/
 |   |- utils/
+```
+
+## Installation
+
+```
+npx create-react-workspaces @mydomain myapp --template=yarn-react-typescript  
 ```
