@@ -25,11 +25,6 @@ module.exports.init = () => {
         mkdirSync(targetDir);
       }
 
-      //   cpSync(templateSource, targetDir, {
-      //     recursive: true,
-      //     force: true,
-      //     filter: (src) => !src.includes('node_modules'),
-      //   });
       execSync(`cp -r ${templateSource}/ ${targetDir}`);
 
       // update app name

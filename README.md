@@ -1,6 +1,6 @@
 # Create React Workspaces
 
-Create a React application workspace with minimal effort.
+Create a React application within a mono repository using workspaces with mininal effort.
 
 The workspace allows you to compose your application(s) from independently versionable packages (components, utils, apis, etc). It also includes some great development tools pre-configured such as elint, jest with react testing library, storybook and cypress.
 
@@ -23,3 +23,5 @@ The structure looks something like:
 ```
 npx create-react-workspaces @mydomain myapp --template=yarn-react-typescript  
 ```
+
+Then within your newly created directory, you can start the app with `yarn start` and storybook with `yarn storybook`.
