@@ -1,0 +1,19 @@
+{
+  "extends": ["prettier", "plugin:jest/recommended"],
+  "plugins": [
+    "import",
+    "prettier",
+    "react",
+    "react-hooks",
+    "jest",
+    "simple-import-sort",
+    "eslint-comments",
+    "jsx-a11y"
+  ],
+  "overrides": [
+    {
+      "files": ["**/__tests__/**/*.js?(x)", "**/?(*.)+(spec|test).js?(x)"],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ]
+}

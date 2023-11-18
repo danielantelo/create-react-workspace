@@ -21,7 +21,14 @@ The structure looks something like:
 ## Installation
 
 ```
-npx create-react-workspaces @mydomain myapp --template=yarn-react-typescript  
+npx create-react-workspaces @mydomain myapp
 ```
+
+Default template will be `yarn-react-typescript`, if you would prefer not to use typescript use the command:
+
+```
+npx create-react-workspaces @mydomain myapp --template=yarn-react
+```
+
 
 Then within your newly created directory, you can start the app with `yarn start` and storybook with `yarn storybook`.

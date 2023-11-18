@@ -2,7 +2,7 @@
   "name": "test-create-react-workspaces",
   "version": "0.1.0",
   "scripts": {
-    "test": "create-react-workspaces @testdomain testapp --template=yarn-react-typescript "
+    "test": "create-react-workspaces @testdomain testapp"
   },
   "dependencies": {
     "create-react-workspaces": "file:../"

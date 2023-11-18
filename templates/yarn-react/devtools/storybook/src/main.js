@@ -6,11 +6,11 @@ function getPackageStories() {
   const rootDir = path.resolve(__dirname, '../../..');
   return workspaces
     .filter((workspace) => workspace !== 'devtools/*')
-    .map((workspace) => path.relative(__dirname, path.join(rootDir, workspace, '**/*.stories.tsx')));
+    .map((workspace) => path.relative(__dirname, path.join(rootDir, workspace, '**/*.stories.jsx')));
 }
 
 module.exports = {
-  stories: ['./stories/*.stories.tsx', ...getPackageStories()],
+  stories: ['./stories/*.stories.jsx', ...getPackageStories()],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   framework: {
     name: '@storybook/react-vite',

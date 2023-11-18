@@ -16,7 +16,7 @@ module.exports.init = () => {
     .arguments('<domain>', 'domain to use for packages @mydomain/mypackage')
     .arguments('<appName>', 'app name will be the name of folder and the main react app')
     .option('--template <path-to-template>', 'specify a template for the created project')
-    .action((domain, appName, { template }) => {
+    .action((domain, appName, { template = 'yarn-react-typescript' }) => {
       const cleanDomain = domain.replace('@', '');
       const targetDir = `./${appName}`;
       const templateSource = resolve(__dirname, `./templates/${template}`);
