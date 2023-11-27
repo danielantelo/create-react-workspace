@@ -32,3 +32,10 @@ npx create-react-workspaces @mydomain myapp --template=yarn-react
 
 
 Then within your newly created directory, you can start the app with `yarn start` and storybook with `yarn storybook`.
+
+## Scripts
+
+- `yarn lint`: lints your entire codespace
+- `yarn typecheck`: runs type checks
+- `yarn test`: runs jest+react-testing-library unit tests
+- `yarn storybook`: opens storybook
