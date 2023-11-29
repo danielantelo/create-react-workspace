@@ -21,13 +21,13 @@ The structure looks something like:
 ## Installation
 
 ```
-npx create-react-workspaces @mydomain myapp
+npx create-react-yarn-workspace @mydomain myapp
 ```
 
 Default template will be `yarn-react-typescript`, if you would prefer not to use typescript use the command:
 
 ```
-npx create-react-workspaces @mydomain myapp --template=yarn-react
+npx create-react-yarn-workspace @mydomain myapp --template=yarn-react
 ```
 
 

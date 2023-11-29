@@ -1,7 +1,7 @@
 {
-  "name": "create-react-workspaces",
-  "version": "0.2.1",
-  "repository": "https://github.com/danielantelo/create-react-workspaces",
+  "name": "create-react-yarn-workspace",
+  "version": "0.2.2",
+  "repository": "https://github.com/danielantelo/create-react-yarn-workspace",
   "author": "Daniel Antelo",
   "license": "OSL-3.0",
   "bin": {
