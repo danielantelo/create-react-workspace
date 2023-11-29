@@ -1,0 +1,26 @@
+{
+  "name": "@mydomain/storybook",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "storybook build -c src -o dist",
+    "start": "storybook dev -c src -p 9002 --ci"
+  },
+  "dependencies": {
+    "@mydomain/component-loader": "workspace:*",
+    "@mydomain/component-sample": "workspace:*",
+    "@storybook/addon-essentials": "^7",
+    "@storybook/addon-links": "^7",
+    "@storybook/addons": "^7",
+    "@storybook/react": "^7",
+    "storybook": "^7"
+  },
+  "devDependencies": {
+    "@storybook/react-vite": "^7",
+    "vite": "^5"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  }
+}

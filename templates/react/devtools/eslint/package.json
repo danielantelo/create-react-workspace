@@ -1,0 +1,22 @@
+{
+  "name": "@mydomain/eslint",
+  "version": "1.0.0",
+  "main": "jest-preset.js",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7",
+    "eslint-config-prettier": "^9",
+    "eslint-plugin-eslint-comments": "^3",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-jest": "^27",
+    "eslint-plugin-jsx-a11y": "^6",
+    "eslint-plugin-prettier": "^4",
+    "eslint-plugin-react": "^7",
+    "eslint-plugin-react-hooks": "^4",
+    "eslint-plugin-simple-import-sort": "^10",
+    "eslint-plugin-testing-library": "^6",
+    "prettier": "^2"
+  },
+  "peerDependencies": {
+    "eslint": "^8"
+  }
+}

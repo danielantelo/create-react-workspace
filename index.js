@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-const { init } = require('./createReactWorkspaces');
+const { init } = require('./createWorkspace');
 
 init();

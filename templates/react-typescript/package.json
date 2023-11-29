@@ -1,0 +1,30 @@
+{
+  "name": "@mydomain/root",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "devtools/*",
+    "packages/components/*",
+    "packages/utils/*"
+  ],
+  "scripts": {
+    "start": "yarn workspace @mydomain/my-app start",
+    "lint": "eslint .",
+    "storybook": "yarn workspace @mydomain/storybook start",
+    "test": "jest",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@mydomain/eslint": "workspace:*",
+    "@mydomain/jest": "workspace:*",
+    "@types/node": "^20",
+    "eslint": "^8",
+    "jest": "^29",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": "^20",
+    "npm": "please-use-yarn",
+    "yarn": ">=3.2"
+  }
+}

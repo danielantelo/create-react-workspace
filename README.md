@@ -24,10 +24,17 @@ The structure looks something like:
 npx create-react-yarn-workspace @mydomain myapp
 ```
 
-Default template will be `yarn-react-typescript`, if you would prefer not to use typescript use the command:
+Default template will be `react-typescript`, which is basic clientside only react app.
+
+Other templates available are:
+
+- `react`: same as above but without typescript
+- `nextjs-typescript`: similar to the defaul but with the main app being nextjs based
+
+To use a template simply run the script with the template arg:
 
 ```
-npx create-react-yarn-workspace @mydomain myapp --template=yarn-react
+npx create-react-yarn-workspace @mydomain myapp --template=react
 ```
 
 

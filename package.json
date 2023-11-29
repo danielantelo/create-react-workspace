@@ -5,7 +5,7 @@
   "author": "Daniel Antelo",
   "license": "OSL-3.0",
   "bin": {
-    "create-react-workspaces": "./index.js"
+    "create-react-yarn-workspace": "./index.js"
   },
   "dependencies": {
     "commander": "^11.1.0",
