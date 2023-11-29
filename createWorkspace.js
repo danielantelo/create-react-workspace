@@ -42,7 +42,7 @@ module.exports.init = () => {
         to: `@${cleanDomain}`,
       });
 
-      execSync(`cd ${targetDir}; yarn install`);
+      execSync(`cd ${targetDir}; yarn install`, { stdio: 'inherit' });
     });
 
   program.parse(process.argv);
