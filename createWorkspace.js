@@ -17,15 +17,18 @@ module.exports.init = () => {
     .arguments('<appName>', 'app name will be the name of folder and the main react app')
     .option('--template <path-to-template>', 'specify a template for the created project')
     .action((domain, appName, { template = 'react-typescript' }) => {
+      const isTypescript = template.includes('typescript');
       const cleanDomain = domain.replace('@', '');
       const targetDir = `./${appName}`;
+      const baseSource = resolve(__dirname, `./templates/${isTypescript ? 'base-typescript' : 'base'}`);
       const templateSource = resolve(__dirname, `./templates/${template}`);
 
       if (!existsSync(targetDir)) {
         mkdirSync(targetDir);
       }
 
-      execSync(`cp -r ${templateSource}/ ${targetDir}`);
+      execSync(`cp -r ${baseSource}/ ${targetDir}`);
+      execSync(`cp -r ${templateSource}/apps ${targetDir}/apps`);
 
       // update app name
       renameSync(`${targetDir}/apps/my-app`, `${targetDir}/apps/${appName}`);
