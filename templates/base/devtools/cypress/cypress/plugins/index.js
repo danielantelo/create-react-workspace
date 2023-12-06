@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 const { addMatchImageSnapshotPlugin } = require('cypress-image-snapshot/plugin');
 const { addCrossBrowserVisualDiscrepanciesPlugin } = require('cypress-storybook-commands/src/plugins');
 
